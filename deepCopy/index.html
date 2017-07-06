@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script src="deepCopy.js"></script>
+<script>
+    var arr = [1,2,3];
+    var arr1 = [];
+    arr1 = arr;
+    arr1[0]=2;  console.log(arr);
+
+    var arr2 = deepCopy(arr);
+    arr2[0]=10; console.log(arr);
+
+    var obj = {
+        name:'tom',
+        course:["math","English"],
+        teacher:{math:"Amy",English:"Mary"}
+    }
+    var obj1 = deepCopy(obj);
+    obj1.course[0]="math1";     console.log(obj.course[0]);
+    obj1.teacher.math = "Amy1"; console.log(obj.teacher.math);
+</script>
+</body>
+</html>
