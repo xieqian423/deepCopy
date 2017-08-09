@@ -7,7 +7,7 @@ function deepCopy(data){
 
     if(typeof data != 'object'){
         return data;
-    }else if(!window.JSON){
+    }else if(window.JSON){
     /*使用JSON的方式实现拷贝*/
         var str = JSON.stringify(data);
         newData = JSON.parse(str);
